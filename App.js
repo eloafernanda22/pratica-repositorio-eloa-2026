@@ -1,10 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
+import '@/global.css';
+import { Button, ButtonText } from "@/components/ui/button"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+
+    <GluestackUIProvider mode="dark">
+      <View style={styles.container}>
+        <Button className="bg-fuchsia-500">
+          <ButtonText>Primeiro Botão</ButtonText>
+        </Button>
+      </View>
+    </GluestackUIProvider>
+
   );
 }
 
